@@ -85,7 +85,7 @@ SWEP.MalfunctionTakeRound = true
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 12
+SWEP.Primary.ClipSize = 32
 
 -- Recoil --
 
