@@ -16,7 +16,7 @@ SWEP.ShellPitch = 90
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2
-SWEP.CamAttachment = 5
+SWEP.CamAttachment = 3
 SWEP.TracerNum = 1
 SWEP.TracerWidth = 1
 SWEP.ShootPitch = 100
@@ -89,7 +89,7 @@ SWEP.Primary.ClipSize = 32
 
 -- Recoil --
 
-SWEP.Recoil = 1.25
+SWEP.Recoil = 1.2
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.25
@@ -438,7 +438,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         MinProgress = 1.3525,
-        Time = 70 / 30,
+        Time = 71 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.2,
