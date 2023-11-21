@@ -302,7 +302,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = .75,
+        Time = 26/30,
         MinProgress = .4,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -311,7 +311,7 @@ SWEP.Animations = {
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = .75,
+        Time = 26/30,
         MinProgress = .4,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
