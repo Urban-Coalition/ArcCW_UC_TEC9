@@ -404,33 +404,6 @@ SWEP.Animations = {
         SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
     },
 
-    ["fire_match"] = {
-        Source = "fire_match",
-        Time = 30 / 30,
-        ShellEjectAt = 0,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
-    },
-    ["fire_iron_match"] = {
-        Source = "fire_match",
-        Time = 30 / 30,
-        ShellEjectAt = 0,
-        SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0},
-            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
-        },
-    },
-    ["fire_empty_match"] = {
-        Source = "fire_empty_match",
-        Time = 24 / 30,
-        ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
-    },
-    ["fire_iron_empty_match"] = {
-        Source = "fire_empty_match",
-        Time = 24 / 30,
-        ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
-    },
 
     -- 12-R Reloads --
 
@@ -530,6 +503,130 @@ SWEP.Animations = {
         },
     },
 
+    -- Open-Bolt Animations --
+
+   ["idle_empty_ob"] = {
+        Source = "idle",
+        Time = 10 / 30,
+    },
+    ["idle_ob"] = {
+        Source = "idle_ob",
+        Time = 10 / 30,
+    },
+    ["draw_ob"] = {
+        Source = "draw_ob",
+        Time = 26/30,
+        MinProgress = .4,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            --{s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["draw_empty_ob"] = {
+        Source = "draw",
+        Time = 26/30,
+        MinProgress = .4,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            --{s = common .. "raise.ogg", t = 0.05},
+        },
+    },
+    ["holster_ob"] = {
+        Source = "holster_ob",
+        Time = .75,
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },
+    ["holster_empty_ob"] = {
+        Source = "holster",
+        Time = .75,
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
+    },
+
+    ["fire_ob"] = {
+        Source = "fire_ob",
+        Time = 20 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            { s = mech, t = 0, v = 0.25 }
+        },
+    },
+    ["fire_iron_ob"] = {
+        Source = "fire_iron_ob",
+        Time = 20 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {
+            {s = common .. "common_mech_light.ogg", t = 0},
+            { s = mech, t = 0 }
+        },
+    },
+    ["fire_empty_ob"] = {
+        Source = "fire_empty_ob",
+        Time = 24 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+    },
+    ["fire_empty_iron_ob"] = {
+        Source = "fire_empty_irons_ob",
+        Time = 24 / 30,
+        ShellEjectAt = 0,
+        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+    },
+
+    -- 12-R Reloads --
+
+    ["reload_ob"] = {
+        Source = "reload_ob",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.3525,
+        Time = 71 / 30,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.62,
+        SoundTable = {
+            { s = rottle, t = 0 / 60 },
+            { s = common .. "magpouch_pull_small.ogg", t = 1 / 60 },
+            { s = common .. "magrelease.ogg", t = 10 / 60 },
+            { s = rottle, t = 11 / 60 },
+            { s = path .. "magout1.ogg", t = 26 / 60 },
+            { s = path .. "magin1.ogg", t = 42 / 60 },
+            { s = rottle, t = 55 / 60 },
+            { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60 },
+        },
+    },
+    ["reload_empty_ob"] = {
+        Source = "reload_empty_ob",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        MinProgress = 1.75,
+        Time = 88 / 30,
+        LastClip1OutTime = 0.76,
+        LHIK = true,
+        LHIKIn = 0.1,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.55,
+        LHIKOut = 0.7,
+        SoundTable = {
+            { s = rottle, t = 0 / 60 },
+            { s = common .. "magrelease.ogg", t = 7 / 60 },
+            { s = path .. "magout1.ogg", t = 16 / 60 },
+            { s = rottle, t = 10 / 60 },
+            { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
+            { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
+            { s = rottle, t = 55 / 60 },
+            { s = path .. "magin1.ogg", t = 64 / 60 },
+            { s = rottle, t = 90 / 60 },
+            { s = path .. "slidedrop1.ogg", t = 94 / 60 },
+        },
+    },
+
  -- Jam Animations --
 
     ["fix"] = {
@@ -568,9 +665,6 @@ SWEP.Animations = {
        -- SoundTable = {
         -- },
     },
-
-
-
 
     -- -- Inspecc --
 
