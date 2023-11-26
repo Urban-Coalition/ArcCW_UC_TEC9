@@ -1,8 +1,8 @@
-att.PrintName = "MVS-08 Auto Mod"
+att.PrintName = "GS-7 Auto Receiver"
 att.AbbrevName = "Auto Mod"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "TEC9 Auto Mod"
+    att.PrintName = "DC-9 Auto Receiver"
 end
 
 att.Icon = Material("entities/att/uc_bullets/9x19.png", "smooth mips")

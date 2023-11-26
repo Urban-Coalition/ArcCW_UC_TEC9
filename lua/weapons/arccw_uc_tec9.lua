@@ -809,7 +809,7 @@ SWEP.Attachments = {
         PrintName = "Receiver",
         Slot = {"uc_tec9_receiver"},
         DefaultAttIcon = Material("entities/att/uc_bullets/9x19.png","mips smooth"),
-        DefaultAttName = "9x19mm Parabellum",
+        DefaultAttName = "Standard Receiver",
         Bone = "body",
         -- DefaultFlags = {"cal_subsonic"},
     },
