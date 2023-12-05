@@ -186,16 +186,17 @@ SWEP.WorldModelOffset = {
 
 local path = ")weapons/arccw_uc_usp/"
 local path1 = ")weapons/arccw_ur/1911/"
+local pathtec = ")weapons/uc_tec9/"
 local common = ")/arccw_uc/common/"
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.ShootSound = {
-    path .. "fire-01.ogg",
-    path .. "fire-02.ogg",
-    path .. "fire-03.ogg",
-    path .. "fire-04.ogg",
-    path .. "fire-05.ogg",
-    path .. "fire-06.ogg"
+    pathtec .. "fire-01.ogg",
+    pathtec .. "fire-02.ogg",
+    pathtec .. "fire-03.ogg",
+    pathtec .. "fire-04.ogg",
+    pathtec .. "fire-05.ogg",
+    pathtec .. "fire-06.ogg"
 }
 SWEP.ShootSoundSilenced = {
     path .. "fire-sup-01.ogg",
@@ -209,23 +210,23 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-local tail = ")/arccw_uc/common/45acp/"
+local tail = ")/arccw_uc/common/9x19/"
 
 SWEP.DistantShootSoundOutdoors = {
-    tail .. "fire-dist-45acp-pistol-ext-01.ogg",
-    tail .. "fire-dist-45acp-pistol-ext-02.ogg",
-    tail .. "fire-dist-45acp-pistol-ext-03.ogg",
-    tail .. "fire-dist-45acp-pistol-ext-04.ogg",
-    tail .. "fire-dist-45acp-pistol-ext-05.ogg",
-    tail .. "fire-dist-45acp-pistol-ext-06.ogg"
+    tail .. "fire-dist-9x19-pistol-ext-01.ogg",
+    tail .. "fire-dist-9x19-pistol-ext-02.ogg",
+    tail .. "fire-dist-9x19-pistol-ext-03.ogg",
+    tail .. "fire-dist-9x19-pistol-ext-04.ogg",
+    tail .. "fire-dist-9x19-pistol-ext-05.ogg",
+    tail .. "fire-dist-9x19-pistol-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-pistol-01.ogg",
-    common .. "fire-dist-int-pistol-02.ogg",
-    common .. "fire-dist-int-pistol-03.ogg",
-    common .. "fire-dist-int-pistol-04.ogg",
-    common .. "fire-dist-int-pistol-05.ogg",
-    common .. "fire-dist-int-pistol-06.ogg"
+    common .. "fire-dist-9x19-pistol-int-01.ogg",
+    common .. "fire-dist-9x19-pistol-int-02.ogg",
+    common .. "fire-dist-9x19-pistol-int-03.ogg",
+    common .. "fire-dist-9x19-pistol-int-04.ogg",
+    common .. "fire-dist-9x19-pistol-int-05.ogg",
+    common .. "fire-dist-9x19-pistol-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-01.ogg",
@@ -269,7 +270,7 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
-local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
+local mech = {pathtec .. "mech-01.ogg", pathtec .. "mech-02.ogg", pathtec .. "mech-03.ogg", pathtec .. "mech-04.ogg", pathtec .. "mech-05.ogg", pathtec .. "mech-06.ogg"}
 
 SWEP.Animations = {
     ["idle_empty"] = {
@@ -373,13 +374,13 @@ SWEP.Animations = {
         Source = "fire",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
     },
     ["fire_iron_empty"] = {
         Source = "fire_iron",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
     },
     ["fire_jammed"] = {
         Source = "fire_jam",
@@ -387,7 +388,7 @@ SWEP.Animations = {
         MinProgress = 0.5,
         ShellEjectAt = false,
         SoundTable = {
-            --{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
+            --{ s = {pathtec .. "mech-01.ogg", pathtec .. "mech-02.ogg", pathtec .. "mech-03.ogg", pathtec .. "mech-04.ogg", pathtec .. "mech-05.ogg", pathtec .. "mech-06.ogg"}, t = 0 }
         },
     },
 
@@ -395,13 +396,13 @@ SWEP.Animations = {
         Source = "fire_stock",
         Time = 30 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
+        SoundTable = {{ s = {pathtec .. "mech-01.ogg", pathtec .. "mech-02.ogg", pathtec .. "mech-03.ogg", pathtec .. "mech-04.ogg", pathtec .. "mech-05.ogg", pathtec .. "mech-06.ogg"}, t = 0, v = 0.25 }},
     },
     ["fire_empty_stock"] = {
         Source = "fire_empty_stock",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
     },
 
 
@@ -569,13 +570,13 @@ SWEP.Animations = {
         Source = "fire_empty_ob",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
     },
     ["fire_empty_iron_ob"] = {
         Source = "fire_empty_irons_ob",
         Time = 24 / 30,
         ShellEjectAt = 0,
-        SoundTable = {{ s = path .. "mech_last.ogg", t = 0 }},
+        SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
     },
 
     -- 12-R Reloads --
