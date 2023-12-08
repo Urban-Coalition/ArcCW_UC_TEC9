@@ -89,13 +89,14 @@ SWEP.Primary.ClipSize = 32
 
 -- Recoil --
 
-SWEP.Recoil = 1.2
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.75
 
 SWEP.RecoilRise = 0.25
 SWEP.VisualRecoilMult = 1.0
 SWEP.MaxRecoilBlowback = .5
 SWEP.MaxRecoilPunch = .8
+SWEP.RecoilPunch = .8
 
 SWEP.Sway = 1
 
@@ -221,12 +222,12 @@ SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-9x19-pistol-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-9x19-pistol-int-01.ogg",
-    common .. "fire-dist-9x19-pistol-int-02.ogg",
-    common .. "fire-dist-9x19-pistol-int-03.ogg",
-    common .. "fire-dist-9x19-pistol-int-04.ogg",
-    common .. "fire-dist-9x19-pistol-int-05.ogg",
-    common .. "fire-dist-9x19-pistol-int-06.ogg"
+    tail .. "fire-dist-9x19-pistol-int-01.ogg",
+    tail .. "fire-dist-9x19-pistol-int-02.ogg",
+    tail .. "fire-dist-9x19-pistol-int-03.ogg",
+    tail .. "fire-dist-9x19-pistol-int-04.ogg",
+    tail .. "fire-dist-9x19-pistol-int-05.ogg",
+    tail .. "fire-dist-9x19-pistol-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-01.ogg",
@@ -241,12 +242,12 @@ SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-10.ogg"
 }
 SWEP.DistantShootSoundIndoorsSilenced = {
-    common .. "fire-dist-int-pistol-light-01.ogg",
-    common .. "fire-dist-int-pistol-light-02.ogg",
-    common .. "fire-dist-int-pistol-light-03.ogg",
-    common .. "fire-dist-int-pistol-light-04.ogg",
-    common .. "fire-dist-int-pistol-light-05.ogg",
-    common .. "fire-dist-int-pistol-light-06.ogg"
+    tail .. "fire-dist-int-pistol-light-01.ogg",
+    tail .. "fire-dist-int-pistol-light-02.ogg",
+    tail .. "fire-dist-int-pistol-light-03.ogg",
+    tail .. "fire-dist-int-pistol-light-04.ogg",
+    tail .. "fire-dist-int-pistol-light-05.ogg",
+    tail .. "fire-dist-int-pistol-light-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
