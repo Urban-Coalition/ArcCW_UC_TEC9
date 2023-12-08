@@ -32,6 +32,7 @@ att.Mult_RPM = 3
 att.Mult_ShootSpeedMult = 0.85
 
 att.Override_Malfunction = true
+att.Override_TriggerDelay = true
 
 att.Override_Firemodes = {
     {

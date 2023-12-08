@@ -272,6 +272,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 local mech = {pathtec .. "mech-01.ogg", pathtec .. "mech-02.ogg", pathtec .. "mech-03.ogg", pathtec .. "mech-04.ogg", pathtec .. "mech-05.ogg", pathtec .. "mech-06.ogg"}
+local mech_ob = {pathtec .. "mech-ob-01.ogg", pathtec .. "mech-ob-02.ogg", pathtec .. "mech-ob-03.ogg", pathtec .. "mech-ob-04.ogg", pathtec .. "mech-ob-05.ogg", pathtec .. "mech-ob-06.ogg"}
 
 SWEP.Animations = {
     ["idle_empty"] = {
@@ -392,6 +393,7 @@ SWEP.Animations = {
             --{ s = {pathtec .. "mech-01.ogg", pathtec .. "mech-02.ogg", pathtec .. "mech-03.ogg", pathtec .. "mech-04.ogg", pathtec .. "mech-05.ogg", pathtec .. "mech-06.ogg"}, t = 0 }
         },
     },
+    
 
     ["fire_stock"] = {
         Source = "fire_stock",
@@ -425,8 +427,8 @@ SWEP.Animations = {
             { s = common .. "magpouch_pull_small.ogg", t = 1 / 60 },
             { s = common .. "magrelease.ogg", t = 10 / 60 },
             { s = rottle, t = 11 / 60 },
-            { s = path .. "magout1.ogg", t = 26 / 60 },
-            { s = path .. "magin1.ogg", t = 42 / 60 },
+            { s = pathtec .. "magout.ogg", t = 26 / 60 },
+            { s = pathtec .. "magin.ogg", t = 42 / 60 },
             { s = rottle, t = 55 / 60 },
             { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60 },
         },
@@ -445,12 +447,12 @@ SWEP.Animations = {
         SoundTable = {
             { s = rottle, t = 0 / 60 },
             { s = common .. "magrelease.ogg", t = 7 / 60 },
-            { s = path .. "magout1.ogg", t = 16 / 60 },
+            { s = pathtec .. "magout.ogg", t = 16 / 60 },
             { s = rottle, t = 10 / 60 },
             { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
             { s = rottle, t = 55 / 60 },
-            { s = path .. "magin1.ogg", t = 64 / 60 },
+            { s = pathtec .. "magin.ogg", t = 64 / 60 },
             { s = rottle, t = 90 / 60 },
             { s = path .. "slidedrop1.ogg", t = 94 / 60 },
         },
@@ -473,11 +475,11 @@ SWEP.Animations = {
             { s = rottle, t = 0 / 60 },
             { s = common .. "magpouch_pull_small.ogg", t = 0 / 60 },
             { s = common .. "magrelease.ogg", t = 10 / 60 },
-            { s = path .. "magout1.ogg", t = 26 / 60 },
+            { s = pathtec .. "magout.ogg", t = 26 / 60 },
             { s = rottle, t = 10 / 60 },
             { s = rottle, t = 55 / 60 },
             { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60 },
-            { s = path .. "magin1.ogg", t = 42 / 60 },
+            { s = pathtec .. "magin.ogg", t = 42 / 60 },
         },
     },
     ["reload_empty_ext"] = {
@@ -494,12 +496,12 @@ SWEP.Animations = {
         SoundTable = {
             { s = rottle, t = 0 / 60 },
             { s = common .. "magrelease.ogg", t = 7 / 60 },
-            { s = path .. "magout1.ogg", t = 16 / 60 },
+            { s = pathtec .. "magout.ogg", t = 16 / 60 },
             { s = rottle, t = 10 / 60 },
             { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
             { s = rottle, t = 55 / 60 },
-            { s = path .. "magin1.ogg", t = 64 / 60 },
+            { s = pathtec .. "magin.ogg", t = 64 / 60 },
             { s = rottle, t = 90 / 60 },
             { s = path .. "slidedrop1.ogg", t = 94 / 60 },
         },
@@ -555,7 +557,7 @@ SWEP.Animations = {
         Time = 20 / 30,
         ShellEjectAt = 0,
         SoundTable = {
-            { s = mech, t = 0, v = 0.25 }
+            { s = mech_ob, t = 0, v = 0.25 }
         },
     },
     ["fire_iron_ob"] = {
@@ -564,7 +566,7 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         SoundTable = {
             {s = common .. "common_mech_light.ogg", t = 0},
-            { s = mech, t = 0 }
+            { s = mech_ob, t = 0 }
         },
     },
     ["fire_empty_ob"] = {
@@ -578,6 +580,13 @@ SWEP.Animations = {
         Time = 24 / 30,
         ShellEjectAt = 0,
         SoundTable = {{ s = pathtec .. "mech_last.ogg", t = 0 }},
+    },
+    ["trigger"] = {
+        Source = "idle",
+        Time = 0.0330,
+        SoundTable = {
+            { s = pathtec .. "prefire.ogg", t = 0 },
+        },
     },
 
     -- 12-R Reloads --
@@ -598,8 +607,8 @@ SWEP.Animations = {
             { s = common .. "magpouch_pull_small.ogg", t = 1 / 60 },
             { s = common .. "magrelease.ogg", t = 10 / 60 },
             { s = rottle, t = 11 / 60 },
-            { s = path .. "magout1.ogg", t = 26 / 60 },
-            { s = path .. "magin1.ogg", t = 42 / 60 },
+            { s = pathtec .. "magout.ogg", t = 26 / 60 },
+            { s = pathtec .. "magin.ogg", t = 42 / 60 },
             { s = rottle, t = 55 / 60 },
             { s = common ..  "magpouch_replace_small.ogg", t = 80 / 60 },
         },
@@ -618,12 +627,12 @@ SWEP.Animations = {
         SoundTable = {
             { s = rottle, t = 0 / 60 },
             { s = common .. "magrelease.ogg", t = 7 / 60 },
-            { s = path .. "magout1.ogg", t = 16 / 60 },
+            { s = pathtec .. "magout.ogg", t = 16 / 60 },
             { s = rottle, t = 10 / 60 },
             { s = common .. "magpouch_pull_small.ogg", t = 29 / 60 },
             { s = common .. "pistol_magdrop.ogg", t = 40 / 60 },
             { s = rottle, t = 55 / 60 },
-            { s = path .. "magin1.ogg", t = 64 / 60 },
+            { s = pathtec .. "magin.ogg", t = 64 / 60 },
             { s = rottle, t = 90 / 60 },
             { s = path .. "slidedrop1.ogg", t = 94 / 60 },
         },
