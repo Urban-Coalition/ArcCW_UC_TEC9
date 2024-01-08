@@ -170,8 +170,8 @@ SWEP.IronSightStruct = {
 SWEP.ActivePos = Vector(-1, 0, -6.3)
 SWEP.ActiveAng = Angle(0, 0, -0.5)
 
-SWEP.CustomizePos = Vector(10, -5, -6.3)
-SWEP.CustomizeAng = Angle(15, 45, 15)
+SWEP.CustomizePos = Vector(-1, 0, -6.3)
+SWEP.CustomizeAng = Angle(0, 0, -0.5)
 
 SWEP.CrouchPos = Vector(-2.5, 0, -6.3)
 SWEP.CrouchAng = Angle(0, 0, -8)
@@ -264,7 +264,22 @@ SWEP.DefaultBodygroups = "000000000"
 SWEP.AttachmentElements = {
     ["pistol_rail"] = {
         VMBodygroups = {
-            {ind = 4,bg = 1},
+            {ind = 4,bg = 2},
+        }
+    },
+    ["uc_tec9_mag_10"] = {
+        VMBodygroups = {
+            {ind = 1,bg = 1},
+        }
+    },
+    ["uc_tec9_mag_20"] = {
+        VMBodygroups = {
+            {ind = 1,bg = 2},
+        }
+    },
+    ["uc_tec9_mag_50"] = {
+        VMBodygroups = {
+            {ind = 1,bg = 3},
         }
     },
 }
@@ -679,40 +694,40 @@ SWEP.Animations = {
         -- },
     },
 
-    -- -- Inspecc --
+     -- Inspecc --
 
-    -- ["enter_inspect"] = {
-    --     Source = "enter_inspect",
-    --     time = 35 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0.3,
-    --     LHIKOut = 0,
-    --     SoundTable = {
-    --         {s = rottle, t = 0},
-    --         {s = common .. "movement-pistol-04.ogg", t = 0},
-    --     },
-    -- },
-    -- ["idle_inspect"] = {
-    --     Source = "idle_inspect",
-    --     time = 72 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKOut = 0,
-    -- },
-    -- ["exit_inspect"] = {
-    --     Source = "exit_inspect",
-    --     time = 66 / 60,
-    --     LHIK = true,
-    --     LHIKIn = 0,
-    --     LHIKEaseOut = 0.3,
-    --     LHIKOut = 0.84,
-    --     SoundTable = {
-    --         {s = rottle, t = 0.05},
-    --         {s = common .. "movement-pistol-03.ogg", t = 0.1},
-    --         {s = common .. "movement-pistol-01.ogg", t = 1},
-    --         {s = rottle, t = 1},
-    --     },
-    -- },
+    ["enter_inspect"] = {
+        Source = "enter_inspect",
+        time = 33 / 30,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKOut = 0,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = common .. "movement-pistol-04.ogg", t = 0},
+        },
+    },
+    ["idle_inspect"] = {
+        Source = "idle_inspect",
+        time = 203 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 0,
+    },
+    ["exit_inspect"] = {
+        Source = "draw", // placeholder for testing
+        time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.84,
+        SoundTable = {
+            {s = rottle, t = 0.05},
+            {s = common .. "movement-pistol-03.ogg", t = 0.1},
+            {s = common .. "movement-pistol-01.ogg", t = 1},
+            {s = rottle, t = 1},
+        },
+    },
 
     -- ["enter_inspect_empty"] = {
     --     Source = "enter_inspect_empty",
@@ -846,7 +861,6 @@ SWEP.Attachments = {
             vpos = Vector(0, -9.5, -0.35),
             vang = Angle(90, 90, -90),
         },
-        ExcludeFlags = {"usp_match"},
     },
     {
         PrintName = "Magazine",
